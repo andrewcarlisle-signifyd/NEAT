@@ -228,7 +228,7 @@ public class Genome implements Comparable {
         }
 
         for (Map.Entry<Integer, GeneNode> mapEntry : nodes.entrySet()) {
-            float sum = 0;
+            double sum = 0;
             int key = mapEntry.getKey();
             GeneNode node = mapEntry.getValue();
 
@@ -283,8 +283,8 @@ public class Genome implements Comparable {
      * @param x value
      * @return the sigmoid of x
      */
-    private float sigmoid(float x) {
-        return (float) (1 / (1 + Math.exp(-4.9 * x)));
+    private double sigmoid(double x) {
+        return (1 / (1 + Math.exp(-4.9 * x)));
     }
 
     /**
